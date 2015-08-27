@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Test</title>
+<style>
+	@keyframes rotatebox{
+		to {transform: rotateX(370deg) rotateY(-330deg) rotateZ(0deg);}
+	}
+	.box{
+		position:absolute;
+		width:10em;
+		height:10em;
+		top:50%;
+		left:50%;
+		margin:-5em 0 0 -5em;
+		transform-style:preserve-3d;
+		transform: rotateX(10deg) rotateY(30deg) rotateZ(0deg);
+		animation:rotatebox 8s linear infinite;
+	}
+	.face{
+		position:absolute;
+		width: 100%;
+		height: 100%;
+		border:1px solid #333;
+		background:#fff;
+		box-shadow:0 0 100px 50px #000 inset;
+	}
+	.face span{
+		position:absolute;
+		top:50%;
+		left:50%;
+		-webkit-transform:translateX(-50%) translateY(-50%);
+    -moz-transform:translateX(-50%) translateY(-50%);
+    -ms-transform:translateX(-50%) translateY(-50%);
+    transform:translateX(-50%) translateY(-50%);
+		color:#333;
+		font-family: 'Microsoft YaHei';
+		font-size:3em;
+	}
+	.f1{
+		transform:translateZ(5em);
+	}
+	.f2{
+		transform:rotateY(90deg) translateZ(5em);
+	}
+	.f3{
+		transform:rotateY(180deg) translateZ(5em);
+	}
+	.f4{
+		transform:rotateY(270deg) translateZ(5em);
+	}
+	.f5{
+		transform:rotateX(270deg) translateZ(5em);
+	}
+	.f6{
+		transform:rotateX(-270deg) translateZ(5em);
+	}
+</style>
+</head>
+<body>
+	<div class="box">
+		<div class="face f1"><span>唵</span></div>
+		<div class="face f2"><span>嘛</span></div>
+		<div class="face f3"><span>呢</span></div>
+		<div class="face f4"><span>叭</span></div>
+		<div class="face f5"><span>咪</span></div>
+		<div class="face f6"><span>吽</span></div>
+	</div>
+</body>
+</html>
